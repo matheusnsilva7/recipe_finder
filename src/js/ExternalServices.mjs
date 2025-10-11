@@ -6,14 +6,6 @@ export default class ExternalServices {
   getData(category) {
     return fetch(`${baseURL}${category}`)
       .then(convertToJson)
-      .then((data) => {
-        return data.categories;
-      });
-  }
-
-  async findProductById(id) {
-    const response = await fetch(`${baseURL}${id}`);
-    const data = await convertToJson(response);
-    return data;
+      .then((data) => data);
   }
 }

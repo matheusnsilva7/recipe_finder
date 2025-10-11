@@ -57,7 +57,6 @@ header .favorites:hover {
   background-color: var(--primary-color);
   color: var(--neutral-white);
   padding: 1.5rem 2rem;
-  border-radius: 2rem 2rem 0 0;
 }
 
 /* ---------- Main ---------- */
@@ -114,15 +113,17 @@ footer {
 
 #random-btn {
   grid-column: span 2;
+  text-decoration: none;
+  text-align: center;
 }
 
 /* ---------- Universal Recipe Card ---------- */
 .recipe-card {
   list-style: none;
   background: var(--neutral-white);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -160,7 +161,7 @@ footer {
 /* Hover effect */
 .recipe-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
 
 /* ---------- Grid layout for results ---------- */
@@ -188,4 +189,94 @@ footer {
 #recipe-detail-section ul {
   list-style: disc;
   padding-left: 1.5rem;
+}
+
+.recipe-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 100rem;
+}
+
+.recipe-img {
+  width: 320px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+.recipe-info {
+  max-width: 500px;
+  color: #333;
+}
+
+.recipe-title {
+  font-size: 3.6rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: #222;
+}
+
+.recipe-info p {
+  margin: 0.3rem 0;
+  font-size: 1.7rem;
+  color: #555;
+  line-height: 1.5;
+}
+.recipe-info a{
+  font-size: 1.5rem ;
+}
+.recipe-body h2 {
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+.ingredients-list li {
+  font-size: 1.7rem;
+  list-style-type: none;
+}
+.instructions {
+  font-size: 1.7rem;
+}
+.btn {
+  display: inline-block;
+  background: #0078d7;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: 8px;
+  margin-top: 1.2rem;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background: #005fa3;
+  transform: scale(1.03);
+}
+
+/* ✅ Mobile-friendly */
+@media (max-width: 700px) {
+  .recipe-header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .recipe-img {
+    width: 100%;
+    max-width: 360px;
+    margin-bottom: 1.5rem;
+  }
+
+  .recipe-info {
+    max-width: 100%;
+  }
+
+  .recipe-title {
+    font-size: 1.8rem;
+  }
 }
