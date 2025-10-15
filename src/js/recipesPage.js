@@ -13,7 +13,7 @@ const dataSource = new ExternalServices();
 const element = document.querySelector(".recipe-header");
 
 const meal = new MealPage(
-  recipe ? "meals" : "recipe",
+  forkifyRecipe ? "recipe" : "meals",
   dataSource,
   element,
   recipe

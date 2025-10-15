@@ -73,6 +73,7 @@ export default class MealPage {
   renderList(meal) {
     let favorite = getLocalStorage("favorite") || [];
     let history = getLocalStorage("history") || [];
+    
     document.querySelector(".recipe-header").innerHTML = MealCartTemplate(
       meal[0] || meal,
       meal.recipe_id ? false : favorite.find((e) => e.id === meal["0"].idMeal)
