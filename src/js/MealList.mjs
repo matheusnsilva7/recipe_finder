@@ -6,12 +6,18 @@ function MealCartTemplate(category) {
   <a href="/${
     category.idMeal
       ? "recipes_page/index.html?recipe"
+      : category.recipe_id
+      ? "recipes_page/index.html?recipe2"
       : "recipes_listing/index.html?category"
-  }=${category.strCategory || category.idMeal}">
-        <img src="${category.strCategoryThumb || category.strMealThumb}" alt="${
-    category.strCategory || category.strMeal
-  }">
-        <h2 class="card__name">${category.strCategory || category.strMeal}</h2>
+  }=${category.strCategory || category.idMeal || category.recipe_id}">
+        <img src="${
+          category.strCategoryThumb ||
+          category.strMealThumb ||
+          category.image_url
+        }" alt="${category.strCategory || category.strMeal || category.title}">
+        <h2 class="card__name">${
+          category.strCategory || category.strMeal || category.title
+        }</h2>
         ${
           category.strCategoryDescription
             ? `<p class="card__description">

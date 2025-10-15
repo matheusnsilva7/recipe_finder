@@ -4,13 +4,18 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/images/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Discover delicious recipes and explore new meal ideas."
+    />
+    <meta name="author" content="Matheus Nascimento Silva" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <title>Recipe Finder</title>
+    <title>Home - Recipe Finder</title>
     <script type="module" src="/js/main.js"></script>
   </head>
   <body>
@@ -18,20 +23,22 @@
 
     <main>
       <section id="search-section">
-        <input
-          type="text"
-          id="ingredient-input"
-          placeholder="Enter ingredients"
-        />
-        <button id="search-btn">Search</button>
+        <div>
+          <input
+            type="text"
+            id="ingredient-input"
+            placeholder="Enter ingredients"
+          />
+          <button id="search-btn">Search</button>
+        </div>
         <a href="../recipes_page/index.html?randomMeal=true" id="random-btn"
           >Surprise Me</a
         >
       </section>
-
-      <section id="results-section"></section>
-
-      <section id="recipe-detail-section" style="display: none"></section>
+      <section>
+        <h1>Top Recipe Categories:</h1>
+        <div id="results-section"></div>
+      </section>
     </main>
     <footer id="main-footer"></footer>
   </body>

@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="../images/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Matheus Nascimento Silva" />
     <meta
       name="description"
-      content="Browse recipes by category, ingredient, or search term."
+      content="View and manage your favorite saved recipes."
     />
-    <meta name="author" content="Matheus Nascimento Silva" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,30 +16,20 @@
       rel="stylesheet"
     />
     <title>Recipe Finder</title>
-    <script type="module" src="../js/recipesPage.js"></script>
+    <script type="module" src="../js/favorites.js"></script>
   </head>
   <body>
     <header id="main-header"></header>
 
     <main>
-      <section id="search-section">
-        <div>
-          <input
-            type="text"
-            id="ingredient-input"
-            name="ingredient-input"
-            placeholder="Enter ingredients"
-          />
-          <button id="search-btn">Search</button>
-        </div>
-        <a href="../recipes_page/index.html?randomMeal=true" id="random-btn"
-          >Surprise Me</a
-        >
+      <section>
+        <h1>Your Favorites:</h1>
+        <div class="favorite-recipes"></div>
       </section>
-
-      <section class="recipe-header"></section>
-
-      <section id="recipe-detail-section" style="display: none"></section>
+      <section class="recently-viewed">
+        <h2>Recently Viewed Recipes:</h2>
+        <div class="history-recipes"></div>
+      </section>
     </main>
     <footer id="main-footer"></footer>
   </body>

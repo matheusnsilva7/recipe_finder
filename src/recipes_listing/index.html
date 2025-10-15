@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="../images/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Browse recipes by category, ingredient, or search term."
+    />
+    <meta name="author" content="Matheus Nascimento Silva" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,21 +23,28 @@
 
     <main>
       <section id="search-section">
-        <input
-          type="text"
-          id="ingredient-input"
-          name="ingredient-input"
-          placeholder="Enter ingredients"
-        />
-        <button id="search-btn">Search</button>
+        <div>
+          <input
+            type="text"
+            id="ingredient-input"
+            name="ingredient-input"
+            placeholder="Enter ingredients"
+          />
+          <button id="search-btn">Search</button>
+        </div>
         <a href="../recipes_page/index.html?randomMeal=true" id="random-btn"
           >Surprise Me</a
         >
       </section>
 
-      <section id="results-section"></section>
-
-      <section id="recipe-detail-section" style="display: none"></section>
+      <section>
+        <h1>Search results for <span class="searched-recipe"></span>:</h1>
+        <div id="results-section">
+          <p class="no-recipes">
+            No recipes found. <span>Try searching from another source.</span>
+          </p>
+        </div>
+      </section>
     </main>
     <footer id="main-footer"></footer>
   </body>

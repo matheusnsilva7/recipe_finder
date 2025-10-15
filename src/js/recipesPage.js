@@ -6,16 +6,21 @@ import { loadHeaderFooter, getParam } from "./utils.mjs";
 loadHeaderFooter();
 
 const recipe = getParam("recipe");
+const forkifyRecipe = getParam("recipe2");
 
 const dataSource = new ExternalServices();
 
 const element = document.querySelector(".recipe-header");
 
 const meal = new MealPage(
-  "meals",
+  recipe ? "meals" : "recipe",
   dataSource,
   element,
-  recipe ? `lookup.php?i=${recipe}` : "random.php"
+  recipe
+    ? `lookup.php?i=${recipe}`
+    : forkifyRecipe
+    ? `get?rId=${forkifyRecipe}`
+    : "random.php"
 );
 
 meal.init();
